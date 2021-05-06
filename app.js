@@ -46,6 +46,17 @@ app.post("/compose", (req, res)=>{
   res.redirect("/");
 });
 
+app.get("/posts/:pathID", (req, res)=>{
+  const pathRequested = req.params.pathID;
+  //console.log(pathRequested);
+  for(let i = 0; i < posts.length; i++){
+    let toCompare = posts[i].title;
+    if(toCompare.includes(pathRequested)){
+      console.log("Match Found");
+    }
+  }
+});
+
 
 app.listen(3000, function() {
   console.log("Server started on port 3000");
