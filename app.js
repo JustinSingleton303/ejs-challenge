@@ -53,6 +53,8 @@ app.get("/posts/:pathID", (req, res)=>{
     let toCompare = posts[i].title;
     if(toCompare.includes(pathRequested)){
       console.log("Match Found");
+    }else{
+      console.log("Not a match");
     }
   }
 });
