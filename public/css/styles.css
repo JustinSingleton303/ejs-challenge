@@ -37,3 +37,10 @@
 	font-size: 12px;
   color: #fff;
 }
+
+.post-p{
+  width: 600px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
